@@ -306,8 +306,6 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
-    [self.navigationController.tabBarController setSelectedIndex:0];
-    
 }
 
 

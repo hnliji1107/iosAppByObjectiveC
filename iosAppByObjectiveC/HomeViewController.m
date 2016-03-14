@@ -28,7 +28,7 @@
     //图片轮播
     float viewW = self.view.bounds.size.width;
     
-    float scrollViewW = viewW * 2 / 3;
+    float scrollViewW = viewW;
     
     float scrollViewH = scrollViewW;
     
@@ -90,7 +90,7 @@
     
     
     //跳转到收藏页面的按钮
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake((viewW-300)/2, scrollViewY+scrollViewH+60, 300, 50)];
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake((viewW-300)/2, scrollViewY+scrollViewH+70, 300, 50)];
     
     [button setTitle:@"查看我的收藏" forState:UIControlStateNormal];
     

@@ -13,6 +13,7 @@
 		BC13696F1C44DFE10062130D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC13696D1C44DFE10062130D /* Main.storyboard */; };
 		BC1369711C44DFE10062130D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC1369701C44DFE10062130D /* Assets.xcassets */; };
 		BC1369741C44DFE10062130D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1369721C44DFE10062130D /* LaunchScreen.storyboard */; };
+		BC2138AF1C96C08600C2670C /* OfferDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2138AE1C96C08600C2670C /* OfferDetailViewController.m */; };
 		BC323FDA1C85452600CC2A6A /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = BC323FD71C85452600CC2A6A /* UIScrollView+SVInfiniteScrolling.m */; };
 		BC323FDB1C85452600CC2A6A /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = BC323FD91C85452600CC2A6A /* UIScrollView+SVPullToRefresh.m */; };
 		BC470C131C84381E00367C67 /* cell-image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC470C121C84381E00367C67 /* cell-image.jpg */; };
@@ -47,6 +48,8 @@
 		BC1369701C44DFE10062130D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC1369731C44DFE10062130D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC1369751C44DFE10062130D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC2138AD1C96C08600C2670C /* OfferDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfferDetailViewController.h; sourceTree = "<group>"; };
+		BC2138AE1C96C08600C2670C /* OfferDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferDetailViewController.m; sourceTree = "<group>"; };
 		BC323FD51C85452600CC2A6A /* SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVPullToRefresh.h; sourceTree = "<group>"; };
 		BC323FD61C85452600CC2A6A /* UIScrollView+SVInfiniteScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVInfiniteScrolling.h"; sourceTree = "<group>"; };
 		BC323FD71C85452600CC2A6A /* UIScrollView+SVInfiniteScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVInfiniteScrolling.m"; sourceTree = "<group>"; };
@@ -142,6 +145,8 @@
 				BC671B2C1C93DF7600844215 /* WeiTaoViewController.m */,
 				BC671B2E1C93E09400844215 /* ShoppingCartViewController.h */,
 				BC671B2F1C93E09400844215 /* ShoppingCartViewController.m */,
+				BC2138AD1C96C08600C2670C /* OfferDetailViewController.h */,
+				BC2138AE1C96C08600C2670C /* OfferDetailViewController.m */,
 			);
 			path = iosAppByObjectiveC;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC2138AF1C96C08600C2670C /* OfferDetailViewController.m in Sources */,
 				BC5F87921C7F18E30082175E /* ItemModel.m in Sources */,
 				BC671B2A1C93DF5B00844215 /* WoDeViewController.m in Sources */,
 				BC323FDB1C85452600CC2A6A /* UIScrollView+SVPullToRefresh.m in Sources */,

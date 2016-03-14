@@ -12,7 +12,7 @@
 
 #import "ItemCell.h"
 
-#import "LoginViewController.h"
+#import "OfferDetailViewController.h"
 
 
 @interface MyCollectionViewController ()
@@ -62,11 +62,11 @@
     
     
     //设置下拉刷新时的各种状态
-    [self.tableView.pullToRefreshView setTitle:@"下拉即可刷新" forState:SVPullToRefreshStateStopped];
+    //[self.tableView.pullToRefreshView setTitle:@"下拉即可刷新" forState:SVPullToRefreshStateStopped];
     
-    [self.tableView.pullToRefreshView setTitle:@"释放即可刷新" forState:SVPullToRefreshStateTriggered];
+    //[self.tableView.pullToRefreshView setTitle:@"释放即可刷新" forState:SVPullToRefreshStateTriggered];
     
-    [self.tableView.pullToRefreshView setTitle:@"加载中..." forState:SVPullToRefreshStateLoading];
+    //[self.tableView.pullToRefreshView setTitle:@"加载中..." forState:SVPullToRefreshStateLoading];
     
     
     [self.view addSubview:self.tableView];
@@ -219,9 +219,9 @@
 //点击某行跳转
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UIViewController *loginViewController = [[LoginViewController alloc] init];
+    UIViewController *offerDetailViewController = [[OfferDetailViewController alloc] init];
     
-    [self.navigationController pushViewController:loginViewController animated:YES];
+    [self.navigationController pushViewController:offerDetailViewController animated:YES];
     
 }
 

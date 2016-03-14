@@ -33,7 +33,7 @@
     //首页Navigation控制器
     UIViewController *homeViewController = [[HomeViewController alloc] init];
     
-    [self setViewController:homeViewController andPageTitle:@"首页页面" andTabTitle:@"首页" andType:@"shouye"];
+    [self setViewController:homeViewController andPageTitle:@"首页" andTabTitle:@"首页" andType:@"shouye"];
     
     UINavigationController *homeNavigationController = [[UINavigationController alloc] initWithRootViewController:homeViewController];
     
@@ -42,7 +42,7 @@
     //微淘控Navigation控制器
     UIViewController *weiTaoViewController = [[WeiTaoViewController alloc] init];
     
-    [self setViewController:weiTaoViewController andPageTitle:@"微淘页面" andTabTitle:@"微淘" andType:@"weitao"];
+    [self setViewController:weiTaoViewController andPageTitle:@"微淘" andTabTitle:@"微淘" andType:@"weitao"];
     
     UINavigationController *weiTaoNavigationController = [[UINavigationController alloc] initWithRootViewController:weiTaoViewController];
     
@@ -51,7 +51,7 @@
     //发现Navigation控制器
     UIViewController *faXianViewController = [[FaXianViewController alloc] init];
     
-    [self setViewController:faXianViewController andPageTitle:@"发现页面" andTabTitle:@"发现" andType:@"faxian"];
+    [self setViewController:faXianViewController andPageTitle:@"发现" andTabTitle:@"发现" andType:@"faxian"];
     
     UINavigationController *faXianNavigationController = [[UINavigationController alloc] initWithRootViewController:faXianViewController];
     
@@ -60,7 +60,7 @@
     //购物车Navigation控制器
     UIViewController *shoppingCartViewController = [[ShoppingCartViewController alloc] init];
     
-    [self setViewController:shoppingCartViewController andPageTitle:@"购物车页面" andTabTitle:@"购物车" andType:@"gouwuche"];
+    [self setViewController:shoppingCartViewController andPageTitle:@"购物车" andTabTitle:@"购物车" andType:@"gouwuche"];
     
     UINavigationController *shoppingCartNavigationController = [[UINavigationController alloc] initWithRootViewController:shoppingCartViewController];
     
@@ -69,7 +69,7 @@
     //我的淘宝Navigation控制器
     UIViewController *woDeViewController = [[WoDeViewController alloc] init];
     
-    [self setViewController:woDeViewController andPageTitle:@"我的淘宝页面" andTabTitle:@"我的淘宝" andType:@"wode"];
+    [self setViewController:woDeViewController andPageTitle:@"我的淘宝" andTabTitle:@"我的淘宝" andType:@"wode"];
     
     UINavigationController *woDeNavigationController = [[UINavigationController alloc] initWithRootViewController:woDeViewController];
     
