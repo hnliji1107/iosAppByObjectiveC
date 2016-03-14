@@ -8,19 +8,15 @@
 
 #import "AppDelegate.h"
 
-#import "HomeController.h"
+#import "HomeViewController.h"
 
-#import "WeiTaoController.h"
+#import "WeiTaoViewController.h"
 
-#import "FaXianController.h"
+#import "FaXianViewController.h"
 
-#import "LoginController.h"
+#import "ShoppingCartViewController.h"
 
-#import "GouwucheController.h"
-
-#import "StackItemOneController.h"
-
-#import "StackItemTwoController.h"
+#import "WoDeViewController.h"
 
 
 @interface AppDelegate ()
@@ -34,110 +30,87 @@
     
     // Override point for customization after application launch.
     
-    //创建Window
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    //首页Navigation控制器
+    UIViewController *homeViewController = [[HomeViewController alloc] init];
     
-    self.window.backgroundColor = [UIColor whiteColor];
+    [self setViewController:homeViewController andPageTitle:@"首页页面" andTabTitle:@"首页" andType:@"shouye"];
+    
+    UINavigationController *homeNavigationController = [[UINavigationController alloc] initWithRootViewController:homeViewController];
     
     
+    
+    //微淘控Navigation控制器
+    UIViewController *weiTaoViewController = [[WeiTaoViewController alloc] init];
+    
+    [self setViewController:weiTaoViewController andPageTitle:@"微淘页面" andTabTitle:@"微淘" andType:@"weitao"];
+    
+    UINavigationController *weiTaoNavigationController = [[UINavigationController alloc] initWithRootViewController:weiTaoViewController];
+    
+    
+    
+    //发现Navigation控制器
+    UIViewController *faXianViewController = [[FaXianViewController alloc] init];
+    
+    [self setViewController:faXianViewController andPageTitle:@"发现页面" andTabTitle:@"发现" andType:@"faxian"];
+    
+    UINavigationController *faXianNavigationController = [[UINavigationController alloc] initWithRootViewController:faXianViewController];
+    
+
+    
+    //购物车Navigation控制器
+    UIViewController *shoppingCartViewController = [[ShoppingCartViewController alloc] init];
+    
+    [self setViewController:shoppingCartViewController andPageTitle:@"购物车页面" andTabTitle:@"购物车" andType:@"gouwuche"];
+    
+    UINavigationController *shoppingCartNavigationController = [[UINavigationController alloc] initWithRootViewController:shoppingCartViewController];
+    
+    
+    
+    //我的淘宝Navigation控制器
+    UIViewController *woDeViewController = [[WoDeViewController alloc] init];
+    
+    [self setViewController:woDeViewController andPageTitle:@"我的淘宝页面" andTabTitle:@"我的淘宝" andType:@"wode"];
+    
+    UINavigationController *woDeNavigationController = [[UINavigationController alloc] initWithRootViewController:woDeViewController];
+    
+    
+
     //tabBar控制器
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     
+    //把多个navigaton控制器添加到tabBar控制器中
+    tabBarController.viewControllers = @[homeNavigationController, weiTaoNavigationController, faXianNavigationController,
+                                         shoppingCartNavigationController, woDeNavigationController];
+    
+    
+    //创建Window
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    //设置一个默认背景色（白色）
+    self.window.backgroundColor = [UIColor whiteColor];
+    
     //设置控制器为Window的根控制器
     self.window.rootViewController = tabBarController;
-    
-    
-    
-    //首页控制器
-    UIViewController *shouyeController = [[HomeController alloc] init];
-    
-    shouyeController.tabBarItem.title = @"首页";
-    
-    shouyeController.tabBarItem.image = [[UIImage imageNamed:@"iconfont-shouye"] imageWithRenderingMode:
-                                UIImageRenderingModeAlwaysOriginal];
-    
-    shouyeController.tabBarItem.selectedImage = [[UIImage imageNamed:@"iconfont-shouye-selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-    
-    
-    //微淘控制器
-    UIViewController *weitaoController = [[WeiTaoController alloc] init];
-    
-    weitaoController.tabBarItem.title = @"微淘";
-    
-    weitaoController.tabBarItem.image = [[UIImage imageNamed:@"iconfont-weitao"] imageWithRenderingMode:
-                                UIImageRenderingModeAlwaysOriginal];
-    
-    weitaoController.tabBarItem.selectedImage = [[UIImage imageNamed:@"iconfont-weitao-selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-    
-    
-    
-    //发现控制器
-    UIViewController *faxianController = [[FaXianController alloc] init];
-    
-    faxianController.tabBarItem.title = @"发现";
-    
-    faxianController.tabBarItem.image = [[UIImage imageNamed:@"iconfont-faxian"] imageWithRenderingMode:
-                                   UIImageRenderingModeAlwaysOriginal];
-    
-    faxianController.tabBarItem.selectedImage = [[UIImage imageNamed:@"iconfont-faxian-selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-    
-    
-    //购物车控制器
-    UIViewController *gouwucheController = [[GouwucheController alloc] init];
-    
-    UINavigationController *gouwucheNavController = [[UINavigationController alloc] initWithRootViewController:gouwucheController];
-    
-    gouwucheNavController.tabBarItem.title = @"购物车";
-    
-    gouwucheNavController.tabBarItem.image = [[UIImage imageNamed:@"iconfont-gouwuche"] imageWithRenderingMode:
-                                              UIImageRenderingModeAlwaysOriginal];
-    
-    gouwucheNavController.tabBarItem.selectedImage = [[UIImage imageNamed:@"iconfont-gouwuche-selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-    StackItemOneController *stackItemOneController = [[StackItemOneController alloc] init];
-    
-    StackItemTwoController *stackItemTwoController = [[StackItemTwoController alloc] init];
-    
-    
-    [gouwucheNavController pushViewController:stackItemOneController animated:true];
-    
-    [gouwucheNavController pushViewController:stackItemTwoController animated:true];
-    
-    
-    
-    
-    //我的淘宝控制器
-    UIViewController *wodeController = [[LoginController alloc] init];
-    
-    wodeController.view.backgroundColor = [[UIColor alloc] initWithRed:.96 green:.96 blue:.96 alpha:1];
-    
-    wodeController.tabBarItem.title = @"我的淘宝";
-    
-    wodeController.tabBarItem.image = [[UIImage imageNamed:@"iconfont-wode"] imageWithRenderingMode:
-                                     UIImageRenderingModeAlwaysOriginal];
-    
-    wodeController.tabBarItem.selectedImage = [[UIImage imageNamed:@"iconfont-wode-selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-
-
-    //添加子控制器到ITabBarController中
-    //第一种方式
-    //    [tb addChildViewController:shouyeController];
-    //    [tb addChildViewController:weitaoController];
-    
-    
-    //第二种方式
-    tabBarController.viewControllers = @[shouyeController, weitaoController, faxianController, gouwucheNavController, wodeController];
-    
     
     //设置Window为主窗口并显示出来
     [self.window makeKeyAndVisible];
     
     
     return YES;
+}
+
+//设置tabBar对应主页面
+- (void)setViewController:(UIViewController *)viewController andPageTitle:(NSString *)pageTitle andTabTitle:(NSString *)tabTitle andType:(NSString *)type {
+    
+    viewController.title = pageTitle;
+    
+    viewController.tabBarItem.title = tabTitle;
+    
+    viewController.tabBarItem.image = [[UIImage imageNamed:[NSString stringWithFormat:@"iconfont-%@", type]] imageWithRenderingMode:
+                                           UIImageRenderingModeAlwaysOriginal];
+    
+    viewController.tabBarItem.selectedImage = [[UIImage imageNamed:[NSString stringWithFormat:@"iconfont-%@-selected", type]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
