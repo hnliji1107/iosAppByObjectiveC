@@ -113,6 +113,13 @@
     
     viewController.tabBarItem.selectedImage = [[UIImage imageNamed:[NSString stringWithFormat:@"iconfont-%@-selected", type]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
+    
+    if ([type isEqualToString:@"weitao"]) {
+        
+        viewController.tabBarItem.badgeValue = @"new";
+        
+    }
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

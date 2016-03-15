@@ -36,9 +36,19 @@
     
     [lbButton setImage:[UIImage imageNamed:@"iconfont-saoyisao"] forState:UIControlStateNormal];
     
-    [lbButton setFrame:CGRectMake(0, -18, 20, 20)];
+    [lbButton setFrame:CGRectMake(0, 0, 20, 20)];
     
     [lbButton addTarget:self action:@selector(todoSaoYiSao:) forControlEvents:UIControlEventTouchUpInside];
+    
+
+    UILabel *lbLabel = [[UILabel alloc] initWithFrame:CGRectMake(-4, 15, 30, 20)];
+    
+    lbLabel.text = @"扫一扫";
+    
+    lbLabel.font = [UIFont systemFontOfSize:10];
+
+    
+    [lbButton addSubview:lbLabel];
 
 
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:lbButton];
@@ -50,9 +60,19 @@
     
     [rbButton setImage:[UIImage imageNamed:@"iconfont-xiaoxi"] forState:UIControlStateNormal];
     
-    [rbButton setFrame:CGRectMake(0, -18, 20, 20)];
+    [rbButton setFrame:CGRectMake(0, 0, 20, 20)];
     
     [rbButton addTarget:self action:@selector(todoXiaoXi:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    UILabel *rbLabel = [[UILabel alloc] initWithFrame:CGRectMake(1, 15, 30, 20)];
+    
+    rbLabel.text = @"消息";
+    
+    rbLabel.font = [UIFont systemFontOfSize:10];
+    
+    
+    [rbButton addSubview:rbLabel];
     
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rbButton];
