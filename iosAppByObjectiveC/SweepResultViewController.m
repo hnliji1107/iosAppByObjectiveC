@@ -1,24 +1,24 @@
 //
-//  OfferDetailViewController.m
+//  SweepResultViewController.m
 //  iosAppByObjectiveC
 //
-//  Created by shijun.lisj on 16/3/14.
+//  Created by shijun.lisj on 16/3/15.
 //  Copyright © 2016年 shijun.lisj. All rights reserved.
 //
 
-#import "OfferDetailViewController.h"
+#import "SweepResultViewController.h"
 
-@interface OfferDetailViewController ()
+@interface SweepResultViewController ()
 
 @end
 
-@implementation OfferDetailViewController
+@implementation SweepResultViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = @"产品详情";
+    self.title = @"扫一扫结果";
     
     
     UILabel *tipLabel = [[UILabel alloc] initWithFrame:CGRectMake((self.view.bounds.size.width-300)/2, 100, 300, 100)];
@@ -27,7 +27,7 @@
     
     tipLabel.textColor = [UIColor whiteColor];
     
-    tipLabel.text = @"产品详情页面";
+    tipLabel.text = @"扫一扫结果页面";
     
     tipLabel.font = [UIFont systemFontOfSize:20];
     

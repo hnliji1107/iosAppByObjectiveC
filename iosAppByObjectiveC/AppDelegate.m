@@ -102,6 +102,8 @@
 //设置tabBar对应主页面
 - (void)setViewController:(UIViewController *)viewController andPageTitle:(NSString *)pageTitle andTabTitle:(NSString *)tabTitle andType:(NSString *)type {
     
+    viewController.view.backgroundColor = [UIColor whiteColor];
+    
     viewController.title = pageTitle;
     
     viewController.tabBarItem.title = tabTitle;

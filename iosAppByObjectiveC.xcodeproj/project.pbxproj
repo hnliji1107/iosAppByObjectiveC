@@ -31,6 +31,9 @@
 		BC671B2A1C93DF5B00844215 /* WoDeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC671B291C93DF5B00844215 /* WoDeViewController.m */; };
 		BC671B2D1C93DF7600844215 /* WeiTaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC671B2C1C93DF7600844215 /* WeiTaoViewController.m */; };
 		BC671B301C93E09400844215 /* ShoppingCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC671B2F1C93E09400844215 /* ShoppingCartViewController.m */; };
+		BCE5DC861C980A81005C7B25 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE5DC851C980A81005C7B25 /* MessagesViewController.m */; };
+		BCE5DC891C980F8D005C7B25 /* SweepResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE5DC881C980F8D005C7B25 /* SweepResultViewController.m */; };
+		BCE5DC8F1C981F9E005C7B25 /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE5DC8E1C981F9E005C7B25 /* SearchResultViewController.m */; };
 		BCE7613C1C7ED5A500C5B8B5 /* hezi0.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE761391C7ED5A500C5B8B5 /* hezi0.png */; };
 		BCE7613D1C7ED5A500C5B8B5 /* hezi1.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE7613A1C7ED5A500C5B8B5 /* hezi1.png */; };
 		BCE7613E1C7ED5A500C5B8B5 /* hezi2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE7613B1C7ED5A500C5B8B5 /* hezi2.png */; };
@@ -78,6 +81,12 @@
 		BC671B2C1C93DF7600844215 /* WeiTaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiTaoViewController.m; sourceTree = "<group>"; };
 		BC671B2E1C93E09400844215 /* ShoppingCartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCartViewController.h; sourceTree = "<group>"; };
 		BC671B2F1C93E09400844215 /* ShoppingCartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingCartViewController.m; sourceTree = "<group>"; };
+		BCE5DC841C980A81005C7B25 /* MessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesViewController.h; sourceTree = "<group>"; };
+		BCE5DC851C980A81005C7B25 /* MessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesViewController.m; sourceTree = "<group>"; };
+		BCE5DC871C980F8D005C7B25 /* SweepResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SweepResultViewController.h; sourceTree = "<group>"; };
+		BCE5DC881C980F8D005C7B25 /* SweepResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SweepResultViewController.m; sourceTree = "<group>"; };
+		BCE5DC8D1C981F9E005C7B25 /* SearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
+		BCE5DC8E1C981F9E005C7B25 /* SearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
 		BCE761391C7ED5A500C5B8B5 /* hezi0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hezi0.png; sourceTree = "<group>"; };
 		BCE7613A1C7ED5A500C5B8B5 /* hezi1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hezi1.png; sourceTree = "<group>"; };
 		BCE7613B1C7ED5A500C5B8B5 /* hezi2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hezi2.png; sourceTree = "<group>"; };
@@ -147,6 +156,12 @@
 				BC671B2F1C93E09400844215 /* ShoppingCartViewController.m */,
 				BC2138AD1C96C08600C2670C /* OfferDetailViewController.h */,
 				BC2138AE1C96C08600C2670C /* OfferDetailViewController.m */,
+				BCE5DC841C980A81005C7B25 /* MessagesViewController.h */,
+				BCE5DC851C980A81005C7B25 /* MessagesViewController.m */,
+				BCE5DC871C980F8D005C7B25 /* SweepResultViewController.h */,
+				BCE5DC881C980F8D005C7B25 /* SweepResultViewController.m */,
+				BCE5DC8D1C981F9E005C7B25 /* SearchResultViewController.h */,
+				BCE5DC8E1C981F9E005C7B25 /* SearchResultViewController.m */,
 			);
 			path = iosAppByObjectiveC;
 			sourceTree = "<group>";
@@ -270,6 +285,7 @@
 			files = (
 				BC2138AF1C96C08600C2670C /* OfferDetailViewController.m in Sources */,
 				BC5F87921C7F18E30082175E /* ItemModel.m in Sources */,
+				BCE5DC891C980F8D005C7B25 /* SweepResultViewController.m in Sources */,
 				BC671B2A1C93DF5B00844215 /* WoDeViewController.m in Sources */,
 				BC323FDB1C85452600CC2A6A /* UIScrollView+SVPullToRefresh.m in Sources */,
 				BC13696C1C44DFE10062130D /* ViewController.m in Sources */,
@@ -278,6 +294,8 @@
 				BC671B301C93E09400844215 /* ShoppingCartViewController.m in Sources */,
 				BC1369691C44DFE10062130D /* AppDelegate.m in Sources */,
 				BCE761471C7EECFD00C5B8B5 /* ItemCell.m in Sources */,
+				BCE5DC8F1C981F9E005C7B25 /* SearchResultViewController.m in Sources */,
+				BCE5DC861C980A81005C7B25 /* MessagesViewController.m in Sources */,
 				BC671B271C93DF2F00844215 /* FaXianViewController.m in Sources */,
 				BC671B2D1C93DF7600844215 /* WeiTaoViewController.m in Sources */,
 				BC1369661C44DFE10062130D /* main.m in Sources */,

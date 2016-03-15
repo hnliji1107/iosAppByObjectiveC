@@ -10,6 +10,12 @@
 
 #import "MyCollectionViewController.h"
 
+#import "MessagesViewController.h"
+
+#import "SweepResultViewController.h"
+
+#import "SearchResultViewController.h"
+
 
 @interface HomeViewController ()
 
@@ -23,6 +29,50 @@
     
     //navigationController下，添加scrollView，会有64px的偏移，也就是导航条的高度
     self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    
+    //设置左侧按钮样式
+    UIButton *lbButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    [lbButton setImage:[UIImage imageNamed:@"iconfont-saoyisao"] forState:UIControlStateNormal];
+    
+    [lbButton setFrame:CGRectMake(0, -18, 20, 20)];
+    
+    [lbButton addTarget:self action:@selector(todoSaoYiSao:) forControlEvents:UIControlEventTouchUpInside];
+
+
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:lbButton];
+    
+    
+    
+    //设置右侧按钮样式
+    UIButton *rbButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    [rbButton setImage:[UIImage imageNamed:@"iconfont-xiaoxi"] forState:UIControlStateNormal];
+    
+    [rbButton setFrame:CGRectMake(0, -18, 20, 20)];
+    
+    [rbButton addTarget:self action:@selector(todoXiaoXi:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rbButton];
+    
+    
+    
+    //搜索框
+    UISearchBar *searchBar = [[UISearchBar alloc] init];
+    
+    [searchBar setReturnKeyType:UIReturnKeySearch];
+    
+    [searchBar setPlaceholder:@"搜索"];
+    
+    [searchBar setSearchBarStyle:UISearchBarStyleMinimal];
+    
+    searchBar.delegate = self;
+    
+    self.navigationItem.titleView = searchBar;
+    
+    
     
     
     //图片轮播
@@ -116,6 +166,33 @@
 - (void)scrollViewDidEndDecelerating:(id)sender {
     
     self.pageControl.currentPage = self.scrollView.contentOffset.x/self.scrollView.frame.size.width;
+    
+}
+
+
+- (void)todoSaoYiSao:(id)sender {
+    
+    UIViewController *sweepResultViewController = [[SweepResultViewController alloc] init];
+    
+    [self.navigationController pushViewController:sweepResultViewController animated:YES];
+    
+}
+
+
+- (void)todoXiaoXi:(id)sender {
+    
+    UIViewController *messagesViewController = [[MessagesViewController alloc] init];
+    
+    [self.navigationController pushViewController:messagesViewController animated:YES];
+    
+}
+
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    
+    UIViewController *searchResultViewController = [[SearchResultViewController alloc] init];
+    
+    [self.navigationController pushViewController:searchResultViewController animated:YES];
     
 }
 
