@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FaXianViewController : UIViewController
+@interface FaXianViewController : UIViewController<UIWebViewDelegate>
+
+@property(nonatomic, strong) UIWebView *webView;
+
+@property(nonatomic, strong) UIActivityIndicatorView *activityIndicatorView;
 
 @end

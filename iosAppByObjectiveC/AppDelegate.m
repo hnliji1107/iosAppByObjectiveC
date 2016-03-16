@@ -82,6 +82,8 @@
     tabBarController.viewControllers = @[homeNavigationController, weiTaoNavigationController, faXianNavigationController,
                                          shoppingCartNavigationController, woDeNavigationController];
     
+    tabBarController.selectedIndex = 2;
+    
     
     //创建Window
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -114,7 +116,7 @@
     viewController.tabBarItem.selectedImage = [[UIImage imageNamed:[NSString stringWithFormat:@"iconfont-%@-selected", type]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     
-    if ([type isEqualToString:@"weitao"]) {
+    if ([type isEqualToString:@"faxian"]) {
         
         viewController.tabBarItem.badgeValue = @"new";
         
