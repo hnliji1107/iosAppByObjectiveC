@@ -30,7 +30,7 @@
     [lbButton addTarget:self action:@selector(todoRefresh:) forControlEvents:UIControlEventTouchUpInside];
     
     
-//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:lbButton];
+    //self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:lbButton];
     
     
     //设置右侧按钮样式
@@ -76,6 +76,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 //页面加载开始前的回调
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     
@@ -118,7 +119,7 @@
     
     self.title = pageTitle;
     
-    self.parentViewController.tabBarItem.title = @"微淘";
+    self.parentViewController.tabBarItem.title = @"发现";
     
 }
 

@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WeiTaoViewController : UIViewController
+@interface WeiTaoViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+
+
+@property (strong, nonatomic) UITableView *tableView;
+
+@property (strong, nonatomic) NSMutableArray *dataDictionary;
 
 @end

@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OfferDetailViewController : UIViewController
+@interface OfferDetailViewController : UIViewController<UIWebViewDelegate>
+
+@property(nonatomic, strong) UIWebView *webView;
+
+@property(nonatomic, strong) UIActivityIndicatorView *activityIndicatorView;
 
 @end

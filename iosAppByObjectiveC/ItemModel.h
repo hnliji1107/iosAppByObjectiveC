@@ -16,6 +16,8 @@
 
 @property (nonatomic, copy) NSString *imageName;
 
+@property (nonatomic, copy) NSString *imageUrl;
+
 @property (nonatomic, copy) NSString *hot;
 
 @end

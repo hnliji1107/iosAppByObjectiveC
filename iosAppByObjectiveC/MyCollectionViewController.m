@@ -171,7 +171,7 @@
 
 
 //设置每个section呈现多少行
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return self.dataArray.count;
     
@@ -179,7 +179,7 @@
 
 
 //每行对应的数据
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     //优先读取缓存
     ItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ItemCell"];
