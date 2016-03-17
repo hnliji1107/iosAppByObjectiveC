@@ -85,8 +85,6 @@
     //更新title
     NSString *pageTitle = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
     
-    pageTitle = [pageTitle substringWithRange:NSMakeRange(0, 16)];
-    
     self.title = pageTitle;
     
 }

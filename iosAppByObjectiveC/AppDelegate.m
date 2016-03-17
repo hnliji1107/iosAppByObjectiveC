@@ -78,11 +78,17 @@
     //tabBar控制器
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     
+    
+    //设置tabBar选中时的文字颜色
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor redColor], NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
+    
+    //调整tabBar底部文字大小
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:10], NSFontAttributeName, nil] forState:UIControlStateNormal];
+    
+    
     //把多个navigaton控制器添加到tabBar控制器中
     tabBarController.viewControllers = @[homeNavigationController, weiTaoNavigationController, faXianNavigationController,
                                          shoppingCartNavigationController, woDeNavigationController];
-    
-    tabBarController.selectedIndex = 2;
     
     
     //创建Window

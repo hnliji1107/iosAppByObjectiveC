@@ -36,22 +36,24 @@
     
     [lbButton setImage:[UIImage imageNamed:@"iconfont-saoyisao"] forState:UIControlStateNormal];
     
+    [lbButton setImage:[UIImage imageNamed:@"iconfont-saoyisao-highlight"] forState:UIControlStateHighlighted];
+    
     [lbButton setFrame:CGRectMake(0, 0, 20, 20)];
     
     [lbButton addTarget:self action:@selector(todoSaoYiSao:) forControlEvents:UIControlEventTouchUpInside];
     
-
-    UILabel *lbLabel = [[UILabel alloc] initWithFrame:CGRectMake(-4, 15, 30, 20)];
     
-    lbLabel.text = @"扫一扫";
+    //间隔空间
+    UIButton *lbSpace = [UIButton buttonWithType:UIButtonTypeCustom];
     
-    lbLabel.font = [UIFont systemFontOfSize:10];
-
+    lbSpace.frame = CGRectMake(0, 0, 10, 0);
     
-    [lbButton addSubview:lbLabel];
+    
+    UIBarButtonItem *lbButtonItem = [[UIBarButtonItem alloc] initWithCustomView:lbButton];
+    
+    UIBarButtonItem *lbSpaceItem = [[UIBarButtonItem alloc] initWithCustomView:lbSpace];
 
-
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:lbButton];
+    self.navigationItem.leftBarButtonItems = @[lbButtonItem, lbSpaceItem];
     
     
     
@@ -60,22 +62,24 @@
     
     [rbButton setImage:[UIImage imageNamed:@"iconfont-xiaoxi"] forState:UIControlStateNormal];
     
+    [rbButton setImage:[UIImage imageNamed:@"iconfont-xiaoxi-highlight"] forState:UIControlStateHighlighted];
+    
     [rbButton setFrame:CGRectMake(0, 0, 20, 20)];
     
     [rbButton addTarget:self action:@selector(todoXiaoXi:) forControlEvents:UIControlEventTouchUpInside];
     
     
-    UILabel *rbLabel = [[UILabel alloc] initWithFrame:CGRectMake(1, 15, 30, 20)];
+    //间隔空间
+    UIButton *rbSpace = [UIButton buttonWithType:UIButtonTypeCustom];
     
-    rbLabel.text = @"消息";
-    
-    rbLabel.font = [UIFont systemFontOfSize:10];
-    
-    
-    [rbButton addSubview:rbLabel];
+    rbSpace.frame = CGRectMake(0, 0, 10, 0);
     
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rbButton];
+    UIBarButtonItem *rbButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rbButton];
+    
+    UIBarButtonItem *rbSpaceItem = [[UIBarButtonItem alloc] initWithCustomView:rbSpace];
+    
+    self.navigationItem.rightBarButtonItems = @[rbButtonItem, rbSpaceItem];
     
     
     

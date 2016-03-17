@@ -29,13 +29,15 @@
     
     AFHTTPSessionManager *httpSessionManager = [[AFHTTPSessionManager alloc] init];
     
+    __weak WeiTaoViewController *weakSelf = self;
+    
     [httpSessionManager GET:@"http://h5.waptest.taobao.com/json/wv/items.json" parameters:@{@"param1": @"1", @"param2":@"2"} progress:^(NSProgress * _Nonnull downloadProgress) {
         
         NSLog(@"progress");
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        self.dataDictionary = [responseObject objectForKey:@"items"];
+        weakSelf.dataDictionary = [responseObject objectForKey:@"items"];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
@@ -75,7 +77,7 @@
 //设置每个section呈现多少行
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 5;
+    return self.dataDictionary.count;
     
 }
 
@@ -104,12 +106,6 @@
         model.price = [obj objectForKey:@"price"];
         
         
-        //保存当前offerDetail路径
-        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        
-        [userDefaults setObject:[obj objectForKey:@"url"] forKey:@"offerDetailUrl"];
-        
-        
         [cell updateCellWidthModel:model];
         
     }];
@@ -130,6 +126,12 @@
 
 //点击某行跳转
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    //保存当前offerDetail路径
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    [userDefaults setObject:[[self.dataDictionary objectAtIndex:indexPath.item] objectForKey:@"url"] forKey:@"offerDetailUrl"];
+    
     
     UIViewController *offerDetailViewController = [[OfferDetailViewController alloc] init];
     

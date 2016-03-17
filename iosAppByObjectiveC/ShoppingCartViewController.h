@@ -10,4 +10,10 @@
 
 @interface ShoppingCartViewController : UIViewController
 
+@property(nonatomic, weak) NSString *tempStr;
+
+@property(nonatomic, strong) NSString *tempStr2;
+
+@property(nonatomic, copy) NSString *tempStr3;
+
 @end
